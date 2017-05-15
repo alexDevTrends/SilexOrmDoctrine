@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{% endblock title %}
+{% block description %}{% endblock description %}
+{% block h1 %}<h1>Atualizar entity</h1>{% endblock h1 %}
+
+{% block content %}
+    <div class="row">
+        <form action="{{ path('IdealTrends_update', {id: entity.id}) }}" method="post" class="col-sm-4">
+            <input type="text" name="title" placeholder="Digite seu Titulo" value="{{ entity.title }}">
+            <input class="btn btn-primary" type="submit" name="submit"/>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{% endblock title %}
+{% block description %}{% endblock description %}
+{% block h1 %}<h1>Mostrar entity</h1>{% endblock h1 %}
+
+{% block content %}
+    {% for idealTrends in entity %}
+        <div>Id : {{ idealTrends.id }}</div>
+        <div>Title : {{ idealTrends.title }}</div>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}List entities{% endblock title %}
+{% block description %}{% endblock description %}
+{% block h1 %}<h1>Listar entities <a href="{{ path('IdealTrends_create') }}" class="btn btn-default">Add entity</a></h1>{% endblock h1 %}
+
+{% block content %}
+    <ul>
+        {% for entity in entities %}
+            <li>Id : {{ entity.id }}, Title : {{ entity.title }} ||
+                <a href="{{ path('IdealTrends_show', {id: entity.id}) }}"><span class="glyphicon glyphicon-info-sign"></span></a>
+                <a href="{{ path('IdealTrends_update', {id: entity.id}) }}"><span class="glyphicon glyphicon-edit"></span></a>
+                <a href="{{ path('IdealTrends_delete', {id: entity.id}) }}"><span class="glyphicon glyphicon-trash"></span></a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

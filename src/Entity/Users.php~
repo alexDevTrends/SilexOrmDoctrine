@@ -1,0 +1,15 @@
+<?php
+
+namespace Entity;
+
+/**
+ * IdealTrends
+ *
+ * @Entity
+ * @Table(name="users")
+ * @Entity(repositoryClass="Repository\UsersRepository")
+ */
+class Users
+{
+
+}
